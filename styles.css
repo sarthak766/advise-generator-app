@@ -14,7 +14,6 @@ body {
     height: 100vh;
 }
 
-/* Container holding the card */
 .container {
     display: flex;
     justify-content: center;
@@ -22,7 +21,6 @@ body {
     height: 100%;
 }
 
-/* Advice card styling */
 .card {
     background-color: hsl(217, 19%, 24%);
     border-radius: 20px;
@@ -42,7 +40,6 @@ body {
 
 .advice-text {
     font-size: 28px;
-    /* As per the style guide */
     font-weight: 800;
     color: hsl(193, 38%, 86%);
     margin: 1.5rem 0;
@@ -77,18 +74,12 @@ body {
     box-shadow: 0 0 40px hsl(150, 100%, 66%);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
 
-    /* .card {
-        max-width: 90%;
-        padding: 1.5rem;
-    } */
     .card {
         width: 300px;
-        /* Adjust width for mobile */
         height: 300px;
-        /* Set height equal to width for a square */
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -97,11 +88,10 @@ body {
 
     .advice-text {
         font-size: 24px;
-        /* Slightly smaller on mobile */
+
     }
 }
 
-/* Large screens (Desktop layout) */
 @media (min-width: 1440px) {
     .card {
         max-width: 500px;
@@ -109,6 +99,5 @@ body {
 
     .advice-text {
         font-size: 28px;
-        /* Maintain larger font size on desktop */
     }
 }

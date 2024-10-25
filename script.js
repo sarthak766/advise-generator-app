@@ -1,17 +1,14 @@
 
-
-// Select the HTML elements that need to be updated
 const adviceNumber = document.querySelector('.advice-number');
 const adviceText = document.querySelector('.advice-text');
 const diceButton = document.querySelector('.dice-button');
 
-// Function to fetch random advice from the API
+
 function getAdvice() {
     fetch('https://api.adviceslip.com/advice')
-        .then(response => response.json())  // Convert response to JSON
+        .then(response => response.json())
         .then(data => {
-            const { slip } = data;  // Destructure the advice data
-            // Update the HTML with new advice
+            const { slip } = data;
             adviceNumber.textContent = `ADVICE #${slip.id}`;
             adviceText.textContent = `"${slip.advice}"`;
         })
@@ -21,5 +18,4 @@ function getAdvice() {
         });
 }
 
-// Add event listener to the dice button to fetch new advice on click
 diceButton.addEventListener('click', getAdvice);
